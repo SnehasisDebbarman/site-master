@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   TextInput,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import Header from "../Components/Header";
@@ -13,7 +14,7 @@ export default function SignUp({ navigation }) {
   return (
     <SafeAreaView className="flex-1">
       <Header title="Sign In" navigation={navigation} />
-      <View className=" flex-grow p-4">
+      <ScrollView className=" flex-grow p-5">
         <TextInput
           placeholder="Your Name"
           className="bg-gray-200 rounded-xl p-5 mb-5"
@@ -47,14 +48,24 @@ export default function SignUp({ navigation }) {
           <AntDesign name="facebook-square" size={24} color="black" />
         </View>
         <View>
-          <TouchableOpacity className="w-full items-center mt-16 py-5 px-10 bg-site-500 ">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("MainStack", { screen: "Home" })}
+            className="w-full items-center mt-16 py-5 px-10 bg-site-500 "
+          >
             <Text className="font-bold">Sign Up</Text>
           </TouchableOpacity>
           <Text className="py-3 text-center">
-            Already Have An Account? <Text className="font-bold">Sign in</Text>
+            Already Have An Account?{" "}
+            <Text
+              onPress={() => navigation.navigate("Login")}
+              className="font-bold"
+            >
+              Sign in
+            </Text>
           </Text>
         </View>
-      </View>
+        <View className="h-20"></View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

@@ -20,15 +20,16 @@
       "ios": {
         "resourceClass": "m1-medium"
       },
-      "android": {
-        "serviceAccountKeyPath": "./site-master.json",
-        "track": "internal"
-      },
 
       "autoIncrement": true
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./site-master.json",
+        "track": "internal"
+      }
+    }
   }
 }
