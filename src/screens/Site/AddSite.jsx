@@ -7,14 +7,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import Header from "../../../Components/Header";
+import Header from "../../Components/Header";
 
 export default function AddSite({ navigation }) {
   const handleCreate = () => {
     navigation.navigate("Home");
   };
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <Header
         title="Add Site"
         navigation={navigation}

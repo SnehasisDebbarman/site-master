@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 
 export default function TaskPage({ navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Tasks" navigation={navigation} navigationActive={true} />
       <View className="p-5">
         <View className="w-full flex flex-row justify-between items-center">

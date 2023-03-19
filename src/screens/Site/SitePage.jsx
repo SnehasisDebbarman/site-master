@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import Header from "../../../Components/Header";
+import Header from "../../Components/Header";
 import placeholder from "../../../assets/placeholder.png";
 import { Feather } from "@expo/vector-icons";
 
@@ -17,7 +17,7 @@ export default function SitePage({ navigation }) {
     navigation.navigate("AddSite");
   };
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Sites" navigation={navigation} navigationActive={true} />
       <View className="flex-grow p-5 bg-white ">
         <View className="bg-gray-200 rounded-xl px-5 mb-5 flex flex-row items-center">

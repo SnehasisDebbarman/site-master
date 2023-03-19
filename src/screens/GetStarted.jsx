@@ -6,7 +6,7 @@ export default function GetStarted({ navigation }) {
     navigation.navigate("AuthenticationHome");
   };
   return (
-    <View className="w-full flex-1 py-20  items-center justify-between bg-slate-100">
+    <View className="w-full flex-1 py-20  items-center justify-between bg-white">
       <View className="grid place-items-center flex-row pt-20 ">
         <Text className="text-2xl font-bold text-secondary">SITE </Text>
         <Text className="text-2xl font-bold text-site-500">MASTER</Text>

@@ -33,7 +33,7 @@ const IconMap = {
 function MyTabBar({ state, descriptors, navigation }) {
   return (
     <SafeAreaView className="bg-white border-t border-t-slate-300">
-      <View className="w-full flex  flex-row justify-between px-5 bg-white pt-5">
+      <View className="w-full flex  flex-row justify-between px-5 bg-white pt-5 pb-2">
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
           const label =
@@ -77,7 +77,11 @@ function MyTabBar({ state, descriptors, navigation }) {
                 (isFocused ? "bg-slate-200" : "")
               }
             >
-              <Image source={IconMap[label]} className="h-5 w-5 mb-2" />
+              <Image
+                source={IconMap[label]}
+                className="h-5 w-5 mb-2"
+                resizeMode="contain"
+              />
               <Text className="text-xs">{label}</Text>
             </TouchableOpacity>
           );

@@ -6,7 +6,7 @@ import { Feather } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Home" navigation={navigation} navigationActive={true} />
       <View className="w-full h-full p-5">
         <View className="w-full flex flex-row justify-between items-center">

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Text, View, SafeAreaView, StatusBar } from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //screens
 import { LoginStackScreen } from "./src/stack/LoginStack";
 import MainStack from "./src/stack/MainStack";
+import ProfileStackScreen from "./src/stack/ProfileStack";
 
 // Keep the splash screen visible while we fetch resources
 // SplashScreen.preventAutoHideAsync();
@@ -54,7 +55,7 @@ export default function App() {
   const AppStack = createNativeStackNavigator();
 
   return (
-    <View className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <NavigationContainer>
         <AppStack.Navigator screenOptions={{ headerShown: false }}>
           <AppStack.Screen
@@ -62,8 +63,10 @@ export default function App() {
             component={LoginStackScreen}
           />
           <AppStack.Screen name="MainStack" component={MainStack} />
+          <AppStack.Screen name="ProfileStack" component={ProfileStackScreen} />
         </AppStack.Navigator>
       </NavigationContainer>
-    </View>
+      <StatusBar />
+    </SafeAreaView>
   );
 }

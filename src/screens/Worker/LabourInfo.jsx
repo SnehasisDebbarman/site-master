@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function LabourInfo({ navigation }) {
   return (
-    <SafeAreaView className=" flex-1">
+    <SafeAreaView className=" flex-1 bg-white">
       <Header
         title="Labour Info "
         navigation={navigation}

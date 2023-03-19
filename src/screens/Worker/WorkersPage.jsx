@@ -11,7 +11,7 @@ import { VictoryPie } from "victory-native";
 
 export default function WorkersPage({ navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Workers" navigation={navigation} navigationActive={true} />
       <ScrollView className="p-5 flex-grow">
         <View className="w-full flex flex-row justify-between items-center">

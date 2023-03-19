@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
     navigation.navigate("SignUp");
   };
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Sign In" navigation={navigation} />
       <View className=" flex-grow p-4">
         <TextInput
@@ -50,7 +50,7 @@ export default function Login({ navigation }) {
         <View>
           <TouchableOpacity
             onPress={HandleSignIn}
-            className="w-full items-center mt-16 py-5 px-10 bg-site-500 "
+            className="w-full items-center mt-16 py-5 px-10 bg-site-500  rounded-lg"
           >
             <Text className="font-bold">Sign in</Text>
           </TouchableOpacity>

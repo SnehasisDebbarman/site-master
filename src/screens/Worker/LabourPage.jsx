@@ -16,7 +16,7 @@ import placeholder from "../../../assets/placeholder.png";
 
 export default function LabourPage({ navigation }) {
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       <Header
         title="Labours "
         navigation={navigation}

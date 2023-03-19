@@ -5,7 +5,7 @@ import { VictoryPie } from "victory-native";
 
 export default function ReportPage({ navigation }) {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <Header title="Reports" navigation={navigation} navigationActive={true} />
       <View className="p-5">
         <View className="w-full flex flex-row justify-between items-center">
