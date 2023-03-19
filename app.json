@@ -2,14 +2,14 @@
   "expo": {
     "name": "site-master",
     "slug": "site-master",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/splashscreen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#222831"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.snehasis.debbarman.sitemaster"
+      "package": "com.snehasis.debbarman.sitemaster",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
