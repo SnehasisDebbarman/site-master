@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home/Home";
+
 // import SitePage from "../screens/SitePage";
 import SiteStack from "./SiteStack";
 import TaskPage from "../screens/TaskPage";
@@ -21,6 +22,7 @@ import home from "../../assets/home.png";
 import site from "../../assets/map1.png";
 import reports from "../../assets/reports.png";
 import tasks from "../../assets/tasks.png";
+import HomeStackScreen from "./HomeStack";
 
 const IconMap = {
   Teams: attendance,
@@ -99,7 +101,7 @@ export default function MainStack() {
       screenOptions={{ headerShown: false }}
       tabBar={(props) => <MyTabBar {...props} />}
     >
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Tasks" component={TaskPage} />
       <Tab.Screen name="Report" component={ReportStackScreen} />
       <Tab.Screen name="Teams" component={WorkerStackScreen} />
