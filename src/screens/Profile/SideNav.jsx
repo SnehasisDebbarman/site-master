@@ -69,7 +69,9 @@ export default function SideNav({ navigation }) {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate("Materials")}
+            onPress={() =>
+              navigation.navigate("Sites", { screen: "Materials" })
+            }
             className="flex-row gap-3 pb-5"
           >
             <Image resizeMode="contain" source={material_icon} />

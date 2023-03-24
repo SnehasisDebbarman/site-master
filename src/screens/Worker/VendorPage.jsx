@@ -17,27 +17,23 @@ import InfoCard from "../../Components/InfoCard";
 import CustomClasses from "../../TaiwindClass/Tailwind";
 import PersonList from "../../Components/PersonList";
 
-export default function LabourPage({ navigation }) {
+export default function VendorPage({ navigation }) {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header
-        title="Labours "
+        title="Vendors "
         navigation={navigation}
         navigationActive={true}
       />
       <ScrollView className="p-5">
         <View className="w-full flex flex-row justify-between items-center ">
-          <Text className="text-xl font-bold">Labours</Text>
+          <Text className="text-xl font-bold">Vendors</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row pt-4">
-          <InfoCard title={"Total Labours"} content={2012} />
-          <InfoCard title={"Present"} content={1212} styles="bg-gray-200" />
-          <InfoCard title={"Absent"} content={1214} />
-        </View>
-        <View className="w-full flex flex-row pb-4">
-          <InfoCard title={"On Leave"} content={2012} />
-          <InfoCard title={"Late"} content={1212} styles="bg-gray-200" />
+          <InfoCard title={"Total Vendors"} content={2012} />
+          <InfoCard title={"Active"} content={1212} styles="bg-gray-200" />
+          <InfoCard title={"Inactove"} content={1214} />
         </View>
 
         {/* labours list */}
@@ -51,7 +47,7 @@ export default function LabourPage({ navigation }) {
               <TouchableOpacity
                 key={it}
                 onPress={() => {
-                  navigation.navigate("LabourDetails");
+                  navigation.navigate("VendorInfo");
                 }}
               >
                 <PersonList />
@@ -63,7 +59,7 @@ export default function LabourPage({ navigation }) {
       <TouchableOpacity
         // onPress={}
         onPress={() => {
-          navigation.navigate("AddLabour");
+          navigation.navigate("AddVendor");
         }}
         className="absolute bottom-4 right-5 flex-row items-center bg-site-500 py-2 px-4 rounded-full"
       >

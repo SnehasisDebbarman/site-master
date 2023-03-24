@@ -7,13 +7,13 @@ import {
 } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../screens/Home";
+import Home from "../screens/Home/Home";
 // import SitePage from "../screens/SitePage";
 import SiteStack from "./SiteStack";
-import ReportPage from "../screens/ReportPage";
 import TaskPage from "../screens/TaskPage";
 // import WorkersPage from "../screens/WorkersPage";
 import WorkerStackScreen from "./WorkerStack";
+import ReportStackScreen from "./ReportStack";
 
 //icons
 import attendance from "../../assets/attendance.png";
@@ -23,7 +23,7 @@ import reports from "../../assets/reports.png";
 import tasks from "../../assets/tasks.png";
 
 const IconMap = {
-  Worker: attendance,
+  Teams: attendance,
   Home: home,
   Sites: site,
   Tasks: tasks,
@@ -101,8 +101,8 @@ export default function MainStack() {
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Tasks" component={TaskPage} />
-      <Tab.Screen name="Report" component={ReportPage} />
-      <Tab.Screen name="Worker" component={WorkerStackScreen} />
+      <Tab.Screen name="Report" component={ReportStackScreen} />
+      <Tab.Screen name="Teams" component={WorkerStackScreen} />
       <Tab.Screen name="Sites" component={SiteStack} />
     </Tab.Navigator>
   );

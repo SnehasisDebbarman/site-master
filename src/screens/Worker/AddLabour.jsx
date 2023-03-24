@@ -8,12 +8,12 @@ import {
 } from "react-native";
 import React from "react";
 import Header from "../../Components/Header";
-import { TailwindClasses } from "../../TaiwindClass/Tailwind";
+import CustomClasses from "../../TaiwindClass/Tailwind";
 import Headings from "../../Components/Headings";
 
-export default function AddSite({ navigation }) {
+export default function AddLabour({ navigation }) {
   const handleCreate = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Labours");
   };
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -24,32 +24,29 @@ export default function AddSite({ navigation }) {
       />
       <View className="w-full p-5">
         <ScrollView>
-          <Headings>Site Name</Headings>
+          <Headings>Labour Name</Headings>
           <TextInput
             placeholder="eg: Niladri Reserviours"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
-          <Headings>Site Owner</Headings>
+          <Headings>Occupation</Headings>
 
           <TextInput
-            placeholder="eg: John Wick"
-            className={TailwindClasses.input}
+            placeholder="eg: Carpenter"
+            className={CustomClasses.input}
           />
 
-          <Headings>Site Manager</Headings>
+          <Headings>Daily Wages</Headings>
+          <TextInput placeholder="eg : 516" className={CustomClasses.input} />
+          <Headings>Skilled</Headings>
           <TextInput
-            placeholder="eg : John Smith"
-            className={TailwindClasses.input}
-          />
-          <Headings>Location</Headings>
-          <TextInput
-            placeholder="eg: sector 5 , Kolkata"
-            className={TailwindClasses.input}
+            placeholder="eg: Yes or No"
+            className={CustomClasses.input}
           />
           <Headings>Contact</Headings>
           <TextInput
             placeholder="eg : +91 90909 09090"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <View className="h-40"></View>
         </ScrollView>

@@ -8,48 +8,41 @@ import {
 } from "react-native";
 import React from "react";
 import Header from "../../Components/Header";
-import { TailwindClasses } from "../../TaiwindClass/Tailwind";
+import CustomClasses from "../../TaiwindClass/Tailwind";
 import Headings from "../../Components/Headings";
 
-export default function AddSite({ navigation }) {
+export default function AddVendor({ navigation }) {
   const handleCreate = () => {
-    navigation.navigate("Home");
+    navigation.navigate("VendorPage");
   };
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header
-        title="Add Site"
+        title="Add Vendor"
         navigation={navigation}
         navigationActive={true}
       />
       <View className="w-full p-5">
         <ScrollView>
-          <Headings>Site Name</Headings>
+          <Headings>Vendor Name</Headings>
           <TextInput
             placeholder="eg: Niladri Reserviours"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
-          <Headings>Site Owner</Headings>
+          <Headings>Company</Headings>
 
           <TextInput
-            placeholder="eg: John Wick"
-            className={TailwindClasses.input}
+            placeholder="eg: Carpenter"
+            className={CustomClasses.input}
           />
 
-          <Headings>Site Manager</Headings>
-          <TextInput
-            placeholder="eg : John Smith"
-            className={TailwindClasses.input}
-          />
-          <Headings>Location</Headings>
-          <TextInput
-            placeholder="eg: sector 5 , Kolkata"
-            className={TailwindClasses.input}
-          />
+          <Headings>Supplied Materials</Headings>
+          <TextInput placeholder="eg : 516" className={CustomClasses.input} />
+
           <Headings>Contact</Headings>
           <TextInput
             placeholder="eg : +91 90909 09090"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <View className="h-40"></View>
         </ScrollView>

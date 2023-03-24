@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import Header from "../../Components/Header";
 import { Ionicons } from "@expo/vector-icons";
+import FloatingActionBtn from "../../Components/FloatingActionBtn";
 
 export default function LabourInfo({ navigation }) {
   return (
@@ -42,6 +43,7 @@ export default function LabourInfo({ navigation }) {
           </View>
         </View>
       </View>
+      <FloatingActionBtn text="edit" />
     </SafeAreaView>
   );
 }

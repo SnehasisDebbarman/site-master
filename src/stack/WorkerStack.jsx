@@ -3,6 +3,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WorkersPage from "../screens/Worker/WorkersPage";
 import LabourInfo from "../screens/Worker/LabourInfo";
 import LabourPage from "../screens/Worker/LabourPage";
+import AddLabour from "../screens/Worker/AddLabour";
+import VendorPage from "../screens/Worker/VendorPage";
+import VendorInfo from "../screens/Worker/VendorInfo";
+import AddVendor from "../screens/Worker/AddVendor";
 
 const WorkerStack = createNativeStackNavigator();
 
@@ -12,6 +16,10 @@ export default function WorkerStackScreen() {
       <WorkerStack.Screen name="Workers" component={WorkersPage} />
       <WorkerStack.Screen name="Labours" component={LabourPage} />
       <WorkerStack.Screen name="LabourDetails" component={LabourInfo} />
+      <WorkerStack.Screen name="AddLabour" component={AddLabour} />
+      <WorkerStack.Screen name="VendorPage" component={VendorPage} />
+      <WorkerStack.Screen name="VendorInfo" component={VendorInfo} />
+      <WorkerStack.Screen name="AddVendor" component={AddVendor} />
     </WorkerStack.Navigator>
   );
 }
