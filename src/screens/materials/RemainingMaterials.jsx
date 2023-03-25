@@ -26,7 +26,7 @@ export default function RemainingMaterials({ navigation }) {
                 <View>
                   <View className=" flex justify-center">
                     <View className="flex-row justify-between items-center pb-2">
-                      <Text className=" w-[30%] text-xl text-bold text-gray-800">
+                      <Text className=" w-[30%] text-lg text-bold text-gray-800">
                         Cement
                       </Text>
 

@@ -27,7 +27,7 @@ export default function LabourPage({ navigation }) {
       />
       <ScrollView className="p-5">
         <View className="w-full flex flex-row justify-between items-center ">
-          <Text className="text-xl font-bold">Labours</Text>
+          <Text className="text-lg font-bold">Labours</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row pt-4">

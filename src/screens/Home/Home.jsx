@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
       <Header title="Home" navigation={navigation} navigationActive={true} />
       <ScrollView className="w-full h-full p-5 pb-10">
         <View className="pb-4 w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Site Overview</Text>
+          <Text className="text-lg font-bold">Site Overview</Text>
           <Text>Details</Text>
         </View>
 
@@ -39,11 +39,12 @@ const Home = ({ navigation }) => {
         </View>
 
         <View className="pt-4 w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Sites Trends</Text>
+          <Text className="text-lg font-bold">Sites Trends</Text>
           <Text>Details</Text>
         </View>
-        <View>
+        <View className="justify-center">
           <VictoryChart
+            width={360}
             minDomain={{ y: 0 }}
 
             // theme={VictoryTheme.material}

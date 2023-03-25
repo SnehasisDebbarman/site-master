@@ -34,7 +34,7 @@ export default function SideNav({ navigation }) {
               className="bg-pink-200 rounded-full"
             />
             <View>
-              <Text className="text-xl font-semibold">
+              <Text className="text-lg font-semibold">
                 Souvik Bhattachariya
               </Text>
               <Text className="text-gray-500">Admin</Text>

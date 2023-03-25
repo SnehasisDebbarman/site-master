@@ -8,7 +8,7 @@ export default function PersonList() {
       <Ionicons name="person-circle-outline" size={60} color="gray" />
       <View className="pl-4 flex justify-center  flex-grow">
         <View className="flex-row justify-between items-center">
-          <Text className="text-xl text-bold text-gray-800 flex-grow">
+          <Text className="text-lg text-bold text-gray-800 flex-grow">
             Mrinal Thakur
           </Text>
           <View className="flex-row items-center px-2 bg-gray-300 py-1 rounded-full">

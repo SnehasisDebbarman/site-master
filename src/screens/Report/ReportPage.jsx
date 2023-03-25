@@ -44,7 +44,7 @@ export default function ReportPage({ navigation }) {
           </TouchableOpacity>
         </View>
         <View className="w-full flex flex-row justify-between items-center py-2">
-          <Text className="text-xl font-bold">Reports</Text>
+          <Text className="text-lg font-bold">Reports</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row">
@@ -62,11 +62,12 @@ export default function ReportPage({ navigation }) {
           <InfoCard title={"Remaining Hours"} content={1214} />
         </View>
         <View className="w-full flex flex-row justify-between items-center py-2">
-          <Text className="text-xl font-bold">Site Trends</Text>
+          <Text className="text-lg font-bold">Site Trends</Text>
           <Text>Details</Text>
         </View>
         <View>
           <VictoryChart
+            width={360}
             minDomain={{ y: 0 }}
 
             // theme={VictoryTheme.material}
@@ -174,7 +175,7 @@ export default function ReportPage({ navigation }) {
           padAngle={1}
         />
         <View className="w-full flex flex-row justify-between items-center py-2">
-          <Text className="text-xl font-bold">Remaining Materials</Text>
+          <Text className="text-lg font-bold">Remaining Materials</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row">

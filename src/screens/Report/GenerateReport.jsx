@@ -28,34 +28,41 @@ export default function GenerateReport({ navigation }) {
         navigation={navigation}
         navigationActive={true}
       />
-      <View className="flex items-center justify-center py-5 gap-2">
-        <View className="w-2/5">
-          <Text className="text-start">From</Text>
+      <View className="w-full flex flex-col p-5 gap-2">
+        <View className="flex flex-row justify-between">
+          <View>
+            <View className="py-2">
+              <Text className="text-start">From</Text>
+            </View>
+
+            <TouchableOpacity
+              //   onPress={() => setModalVisible(true)}
+              className="border-2 border-gray-200 p-2 rounded-lg flex-row"
+            >
+              <AntDesign name="calendar" size={16} color="gray" />
+              <Text className="pl-2 text-gray-600">
+                {moment(StartDate).format("Do MMM, YYYY")}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <View className="py-2">
+              <Text className="text-start">To</Text>
+            </View>
+
+            <TouchableOpacity
+              //   onPress={() => setModalVisible(true)}
+              className=" border-2 border-gray-200 p-2 rounded-lg flex-row"
+            >
+              <AntDesign name="calendar" size={16} color="gray" />
+              <Text className="pl-2 text-gray-600">
+                {moment(EndDate).format("Do MMM, YYYY")}
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <TouchableOpacity
-          //   onPress={() => setModalVisible(true)}
-          className="border-2 border-gray-200 w-2/5 p-2 rounded-lg flex-row"
-        >
-          <AntDesign name="calendar" size={16} color="gray" />
-          <Text className="pl-2 text-gray-600">
-            {moment(StartDate).format("Do MMM, YYYY")}
-          </Text>
-        </TouchableOpacity>
-        <View className="w-2/5">
-          <Text className="text-start">To</Text>
-        </View>
-
-        <TouchableOpacity
-          //   onPress={() => setModalVisible(true)}
-          className=" border-2 border-gray-200 w-2/5 p-2 rounded-lg flex-row"
-        >
-          <AntDesign name="calendar" size={16} color="gray" />
-          <Text className="pl-2 text-gray-600">
-            {moment(EndDate).format("Do MMM, YYYY")}
-          </Text>
-        </TouchableOpacity>
-        <View className="pt-5">
+        <View className="pt-5 flex-row justify-between">
           <Button text="Generate Report"></Button>
           <Button text="Download Report"></Button>
         </View>

@@ -11,20 +11,20 @@ import Header from "../../Components/Header";
 import CustomClasses from "../../TaiwindClass/Tailwind";
 import Headings from "../../Components/Headings";
 
-export default function AddVendor({ navigation }) {
+export default function AddContractor({ navigation }) {
   const handleCreate = () => {
-    navigation.navigate("VendorPage");
+    navigation.navigate("ContractorPage");
   };
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header
-        title="Add Vendor"
+        title="Add Contractor"
         navigation={navigation}
         navigationActive={true}
       />
       <View className="w-full p-5">
         <ScrollView>
-          <Headings>Vendor Name</Headings>
+          <Headings>Contractor Name</Headings>
           <TextInput
             placeholder="eg: Niladri Reserviours"
             className={CustomClasses.input}

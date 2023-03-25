@@ -21,17 +21,17 @@ export default function VendorPage({ navigation }) {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header
-        title="Vendors "
+        title="Contractors "
         navigation={navigation}
         navigationActive={true}
       />
       <ScrollView className="p-5">
         <View className="w-full flex flex-row justify-between items-center ">
-          <Text className="text-xl font-bold">Vendors</Text>
+          <Text className="text-lg font-bold">Contractors</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row pt-4">
-          <InfoCard title={"Total Vendors"} content={2012} />
+          <InfoCard title={"Total Contractors"} content={2012} />
           <InfoCard title={"Active"} content={1212} styles="bg-gray-200" />
           <InfoCard title={"Inactove"} content={1214} />
         </View>

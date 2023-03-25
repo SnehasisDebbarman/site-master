@@ -13,7 +13,7 @@ import { AntDesign } from "@expo/vector-icons";
 export default function Login({ navigation }) {
   const HandleSignIn = () => {
     // navigation.navigate("Home");
-    navigation.navigate("MainStack", { screen: "Home" });
+    navigation.navigate("MainStack", { screen: "Sites" });
   };
   const HandleSignUp = () => {
     navigation.navigate("SignUp");

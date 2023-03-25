@@ -86,7 +86,7 @@ export default function TaskPage({ navigation }) {
           />
         </View>
         <View className="w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Tasks</Text>
+          <Text className="text-lg font-bold">Tasks</Text>
           <Text>Details</Text>
         </View>
         <View>
@@ -120,7 +120,7 @@ export default function TaskPage({ navigation }) {
                 className="border border-gray-200 p-4 rounded-lg shadow-lg "
               >
                 <View className="flex-row justify-between items-center pb-2">
-                  <Text className="text-xl font-bold">Cement Delivery</Text>
+                  <Text className="text-lg font-bold">Cement Delivery</Text>
                   <TouchableOpacity className="p-2 px-3 bg-yellow-400 rounded flex-row">
                     <FontAwesome name="edit" size={16} color="black" />
                     <Text className="pl-1 text-xs text-center">Edit </Text>

@@ -26,7 +26,7 @@ const MaterialHome = ({ navigation }) => {
       />
       <ScrollView className="w-full h-full p-5 pb-10">
         <View className="pb-4 w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Site Overview</Text>
+          <Text className="text-lg font-bold">Site Overview</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate("RemainingMaterials")}
           >
@@ -41,7 +41,7 @@ const MaterialHome = ({ navigation }) => {
         </View>
 
         <View className="pt-4 w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Material Received</Text>
+          <Text className="text-lg font-bold">Material Received</Text>
           <Text>Details</Text>
         </View>
         <View className="flex flex-row py-5 gap-2 justify-between">
@@ -78,7 +78,7 @@ const MaterialHome = ({ navigation }) => {
                 <View>
                   <View className=" flex justify-center">
                     <View className="flex-row justify-between items-center pb-2">
-                      <Text className=" w-[30%] text-xl text-bold text-gray-800">
+                      <Text className=" w-[30%] text-lg text-bold text-gray-800">
                         Cement
                       </Text>
 

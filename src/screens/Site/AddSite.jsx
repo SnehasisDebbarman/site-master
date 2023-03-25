@@ -8,8 +8,9 @@ import {
 } from "react-native";
 import React from "react";
 import Header from "../../Components/Header";
-import { TailwindClasses } from "../../TaiwindClass/Tailwind";
+import CustomClasses from "../../TaiwindClass/Tailwind";
 import Headings from "../../Components/Headings";
+import FloatingActionBtn from "../../Components/FloatingActionBtn";
 
 export default function AddSite({ navigation }) {
   const handleCreate = () => {
@@ -27,29 +28,29 @@ export default function AddSite({ navigation }) {
           <Headings>Site Name</Headings>
           <TextInput
             placeholder="eg: Niladri Reserviours"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <Headings>Site Owner</Headings>
 
           <TextInput
             placeholder="eg: John Wick"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
 
           <Headings>Site Manager</Headings>
           <TextInput
             placeholder="eg : John Smith"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <Headings>Location</Headings>
           <TextInput
             placeholder="eg: sector 5 , Kolkata"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <Headings>Contact</Headings>
           <TextInput
             placeholder="eg : +91 90909 09090"
-            className={TailwindClasses.input}
+            className={CustomClasses.input}
           />
           <View className="h-40"></View>
         </ScrollView>

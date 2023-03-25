@@ -10,14 +10,49 @@ import Header from "../../Components/Header";
 import { VictoryPie } from "victory-native";
 import InfoCard from "../../Components/InfoCard";
 import { DataTable } from "react-native-paper";
+import { AntDesign } from "@expo/vector-icons";
+import Headings from "../../Components/Headings";
+import { Chip } from "react-native-paper";
 
 export default function WorkersPage({ navigation }) {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <Header title="Workers" navigation={navigation} navigationActive={true} />
       <ScrollView className="p-5 flex-grow">
-        <View className="w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold">Attendance</Text>
+        <Headings>
+          <Text>Quick Actions</Text>
+        </Headings>
+        <View className="flex flex-wrap flex-row gap-2">
+          <Chip
+            onPress={() => {
+              navigation.navigate("AddLabour");
+            }}
+            elevated={true}
+            icon="plus"
+            className="bg-amber-200 "
+          >
+            <Text className="text-[10px]">Add Labour</Text>
+          </Chip>
+          <Chip icon="plus" className="bg-amber-200">
+            <Text className="text-[10px]">Add Labour Attendance</Text>
+          </Chip>
+
+          <Chip
+            onPress={() => {
+              navigation.navigate("AddContractor");
+            }}
+            icon="plus"
+            className="bg-amber-200"
+          >
+            <Text className="text-[10px]">Add Contractor</Text>
+          </Chip>
+
+          <Chip icon="plus" className="bg-amber-200">
+            <Text className="text-[10px]"> Add Contractor Attendance</Text>
+          </Chip>
+        </View>
+        <View className="w-full flex flex-row justify-between items-center py-2">
+          <Text className="text-lg font-bold">Attendance</Text>
           <Text>Details</Text>
         </View>
         <View className="w-full flex flex-row">
@@ -40,11 +75,24 @@ export default function WorkersPage({ navigation }) {
           />
         </View>
         {/* Labour */}
+
         <View className="w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold py-2">Labours</Text>
+          <View className="py-4 flex-row">
+            <Text className="text-lg font-bold ">Labours</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("AddLabour");
+              }}
+              className=" ml-2 flex-row items-center px-2 py-1 bg-amber-200 rounded"
+            >
+              <AntDesign name="plus" size={10} color="black" />
+              <Text className="ml-1 text-[8px]">Add Labour</Text>
+            </TouchableOpacity>
+          </View>
+
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("Labours");
+              navigation.navigate("AddContractor");
             }}
           >
             <Text>Details</Text>
@@ -57,7 +105,19 @@ export default function WorkersPage({ navigation }) {
         </View>
         {/* vendor */}
         <View className="w-full flex flex-row justify-between items-center">
-          <Text className="text-xl font-bold py-2">Vendors</Text>
+          <View className="py-4 flex-row">
+            <Text className="text-lg font-bold ">Contractors</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("AddContractor");
+              }}
+              className=" ml-2 flex-row items-center px-2 py-1 bg-amber-200 rounded"
+            >
+              <AntDesign name="plus" size={10} color="black" />
+              <Text className="ml-1 text-[8px]">Add Contractor</Text>
+            </TouchableOpacity>
+          </View>
+
           <TouchableOpacity
             onPress={() => {
               navigation.navigate("VendorPage");
@@ -67,7 +127,7 @@ export default function WorkersPage({ navigation }) {
           </TouchableOpacity>
         </View>
         <View className="w-full flex flex-row">
-          <InfoCard title={"Total Vendors"} content={2012} />
+          <InfoCard title={"Total Contractors"} content={2012} />
           <InfoCard title={"Active"} content={1212} styles="bg-gray-200" />
           <InfoCard title={"Inactive"} content={1214} />
         </View>

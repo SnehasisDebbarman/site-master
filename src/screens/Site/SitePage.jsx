@@ -10,6 +10,7 @@ import React from "react";
 import Header from "../../Components/Header";
 import placeholder from "../../../assets/placeholder.png";
 import { Feather } from "@expo/vector-icons";
+import FloatingActionBtn from "../../Components/FloatingActionBtn";
 
 export default function SitePage({ navigation }) {
   const NavigateAddSite = () => {
@@ -39,13 +40,11 @@ export default function SitePage({ navigation }) {
             </View>
           </View>
         </View>
-        <TouchableOpacity
+        <FloatingActionBtn
           onPress={NavigateAddSite}
-          className="absolute bottom-4 right-5 flex-row items-center bg-site-500 py-2 px-4 rounded-full"
-        >
-          <Feather name="plus" size={24} color="black" />
-          <Text className="pl-2">Add Site</Text>
-        </TouchableOpacity>
+          text="Add Site"
+          Icon={<Feather name="plus" size={24} color="black" />}
+        />
       </View>
     </SafeAreaView>
   );

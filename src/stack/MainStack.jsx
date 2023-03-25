@@ -25,7 +25,7 @@ import tasks from "../../assets/tasks.png";
 import HomeStackScreen from "./HomeStack";
 
 const IconMap = {
-  Teams: attendance,
+  Attendence: attendance,
   Home: home,
   Sites: site,
   Tasks: tasks,
@@ -35,7 +35,7 @@ const IconMap = {
 function MyTabBar({ state, descriptors, navigation }) {
   return (
     <SafeAreaView className="bg-white border-t border-t-slate-300">
-      <View className="w-full flex  flex-row justify-between px-5 bg-white pt-5 pb-2">
+      <View className="w-full flex  flex-row justify-between px-5 bg-white py-3">
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
           const label =
@@ -75,16 +75,16 @@ function MyTabBar({ state, descriptors, navigation }) {
               onPress={onPress}
               onLongPress={onLongPress}
               className={
-                "flex items-center p-3 rounded-lg " +
+                "flex items-center p-2 rounded-lg " +
                 (isFocused ? "bg-slate-200" : "")
               }
             >
               <Image
                 source={IconMap[label]}
-                className="h-5 w-5 mb-2"
+                className="h-4 w-4 mb-1"
                 resizeMode="contain"
               />
-              <Text className="text-xs">{label}</Text>
+              <Text className="text-[8px]">{label}</Text>
             </TouchableOpacity>
           );
         })}
@@ -104,7 +104,7 @@ export default function MainStack() {
       <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Tasks" component={TaskPage} />
       <Tab.Screen name="Report" component={ReportStackScreen} />
-      <Tab.Screen name="Teams" component={WorkerStackScreen} />
+      <Tab.Screen name="Attendence" component={WorkerStackScreen} />
       <Tab.Screen name="Sites" component={SiteStack} />
     </Tab.Navigator>
   );
