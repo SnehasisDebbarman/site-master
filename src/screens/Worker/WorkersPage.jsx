@@ -27,7 +27,6 @@ export default function WorkersPage({ navigation }) {
             onPress={() => {
               navigation.navigate("AddLabour");
             }}
-            elevated={true}
             icon="plus"
             className="bg-amber-200 "
           >
@@ -92,7 +91,7 @@ export default function WorkersPage({ navigation }) {
 
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("AddContractor");
+              navigation.navigate("Labours");
             }}
           >
             <Text>Details</Text>
