@@ -2,18 +2,16 @@
   "expo": {
     "name": "site-master",
     "slug": "site-master",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splashscreen.png",
       "resizeMode": "cover",
       "backgroundColor": "#222831"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -23,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.snehasis.debbarman.sitemaster",
-      "versionCode": 6
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,6 +30,12 @@
       "eas": {
         "projectId": "11e638f6-cbc6-4593-950b-ffe91bd6823a"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/11e638f6-cbc6-4593-950b-ffe91bd6823a"
     }
   }
 }
